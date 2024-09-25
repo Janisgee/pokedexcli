@@ -3,9 +3,10 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/Janisgee/pokedexcli/internal/pokeapi"
 	"os"
 	"strings"
+
+	"github.com/Janisgee/pokedexcli/internal/pokeapi"
 )
 
 type Config struct {
