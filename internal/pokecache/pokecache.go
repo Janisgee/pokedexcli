@@ -42,8 +42,7 @@ func (c *Cache) Get(key string) ([]byte, bool) {
 }
 
 func (c *Cache) reapLoop(interval time.Duration) {
-	c.mux.Lock()
-	defer c.mux.Unlock()
+
 	ticker := time.NewTicker(interval)
 	for range ticker.C {
 		c.reap(time.Now().UTC(), interval)
