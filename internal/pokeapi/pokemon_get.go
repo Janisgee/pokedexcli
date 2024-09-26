@@ -40,6 +40,6 @@ func (c *Client) GetPokemon(pokemonName string) (Pokemon, error) {
 	if err != nil {
 		return Pokemon{}, err
 	}
-
+	c.cache.Add(url, data)
 	return pokemonResp, nil
 }

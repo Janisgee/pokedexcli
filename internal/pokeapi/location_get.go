@@ -41,6 +41,6 @@ func (c *Client) GetLocation(locationName string) (Location, error) {
 	if err != nil {
 		return Location{}, err
 	}
-
+	c.cache.Add(url, data)
 	return locationResp, nil
 }
